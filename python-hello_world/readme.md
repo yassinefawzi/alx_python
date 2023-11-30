@@ -1,0 +1,1 @@
+this is a file containing python programs that manipulate strings and make mathematical calculations
