@@ -1,10 +1,7 @@
 def print_matrix_integer(matrix=[[]]):
-    if not matrix:
-        return
-    
-    for row in matrix:
-        for col in enumerate(row):
-            if len(row) == len(row) - 1:
+   for row in matrix:
+        for i, col in enumerate(row):
+            if i == len(row) - 1:
                 print("{:d}".format(col), end="")
             else:
                 print("{:d} ".format(col), end="")
