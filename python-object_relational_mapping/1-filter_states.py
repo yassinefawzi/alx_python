@@ -7,7 +7,7 @@ try:
     # making connection to the localhost
     database = host.connect(host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
     cursor = database.cursor()
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' AND BINARY LEFT(name, 1) = 'N' ORDER BY states.id ASC"
     cursor.execute(query)
     result = cursor.fetchall()
 

@@ -11,7 +11,7 @@ try:
                 JOIN states ON cities.state_id = states.id
                 ORDER BY cities.state_id ASC, cities.id ASC;
             '''
-    cursor.execute(query, (name_searched,))
+    cursor.execute(query)
     result = cursor.fetchall()
         
     # printing the results

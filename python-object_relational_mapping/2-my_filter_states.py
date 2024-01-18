@@ -13,7 +13,8 @@ try:
 
     # printing the results
     for i in result:
-        print(i)
+        if i[1][0] >= 'A' and i[1][0] <= 'Z':
+            print(i)
 except host.Error as err:
     # printing an error message using erno to explain the type of error
     print(f"couldn't connect to localhost: {err}")
