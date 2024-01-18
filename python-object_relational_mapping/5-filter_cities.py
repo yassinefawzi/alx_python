@@ -16,7 +16,7 @@ try:
         
     # printing the results
     for i in result:
-        print(i[0])
+        print("%s, ".format(i[0]), END='')
 except host.Error as err:
     # printing an error message using erno to explain the type   of error
     print(f"couldn't connect to localhost: {err}")
