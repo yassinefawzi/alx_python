@@ -8,7 +8,7 @@ try:
     databe = host.connect(host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
     cursor = databe.cursor()
     query = query = '''SELECT cities.name FROM cities
-                JOIN states ON cities.state_id = states.id WHERE cities.name = %s
+                JOIN states ON cities.state_id = states.id WHERE states_id = (SELECT id FROM states WHERE name = %s)
                 ORDER BY cities.id ASC;
             '''
     cursor.execute(query, (argv[4],))
