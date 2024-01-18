@@ -1,0 +1,1 @@
+this is my first time using sqlalchemy in the files i used both mysql and python to create a code that returns a state name in states table located in my localhost
