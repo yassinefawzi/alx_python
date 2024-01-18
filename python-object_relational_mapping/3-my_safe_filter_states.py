@@ -8,7 +8,7 @@ try:
     databe = host.connect(host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
     cursor = databe.cursor()
     query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
-    cursor.execute(query, (argv[4]))
+    cursor.execute(query, (argv[4],))
     result = cursor.fetchall()
  
     # printing the results
