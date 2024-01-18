@@ -15,8 +15,8 @@ try:
     result = cursor.fetchall()
         
     # printing the results
-    for i in result:
-        print(', '.join(i))
+    result = ', '.join(i[0] for i in result)
+    print(result)
 except host.Error as err:
     # printing an error message using erno to explain the type   of error
     print(f"couldn't connect to localhost: {err}")
