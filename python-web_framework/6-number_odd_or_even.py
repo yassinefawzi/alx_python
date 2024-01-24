@@ -1,17 +1,15 @@
 from flask import Flask, render_template
 
-"""
-this file has multiple functions that return diffrent values depends
-on the route it called from
-"""
-
 '''assigning flask to app'''
 app = Flask(__name__)
 
 '''assigning the app route to the root with ignoring slashes'''
 @app.route('/', strict_slashes = False)
 def hello_hbnb():
-    '''creating a function that return text if called by root'''
+    """
+    this function return a string with Hello HBNB! if it's accessed
+    with the root
+    """
     return "Hello HBNB!"
 
 @app.route('/hbnb', strict_slashes = False)
