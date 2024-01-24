@@ -3,20 +3,20 @@ from flask import Flask
 '''assigning flask to app'''
 app = Flask(__name__)
 
-#assigning the app route to the root with ignoring slashes
+'''assigning the app route to the root with ignoring slashes'''
 @app.route('/', strict_slashes = False)
 def hello_hbnb():
-    # creating a function that return text if called by root
-    return "Hello HBNB!"
+    '''creating a function that return text if opened by root'''
+    return ("Hello HBNB!")
 
 @app.route('/hbnb', strict_slashes = False)
 def hbnb():
-    # creating a function that return text if called by hbnb
-    return "HBNB"
+    '''creating a function that return text if called by hbnb'''
+    return("HBNB")
 
 @app.route('/c/<text>', strict_slashes = False)
 def c_text(text):
-    # creating a function that return text with the string next to it
+    '''creating a function that return text with the string next to it'''
     text = text.replace('_', ' ')
     return f"C {text}"
 
