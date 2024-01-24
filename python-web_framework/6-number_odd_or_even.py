@@ -1,5 +1,12 @@
 from flask import Flask, render_template
 
+"""
+
+this file has multiple functions that return diffrent values depends
+on the route it called from
+
+"""
+
 '''assigning flask to app'''
 app = Flask(__name__)
 
