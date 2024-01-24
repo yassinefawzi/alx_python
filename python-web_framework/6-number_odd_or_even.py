@@ -12,7 +12,6 @@ def hello_hbnb():
     """
     this function return a string with Hello HBNB! if it's accessed
     with the root
-
     """
     return "Hello HBNB!"
 
