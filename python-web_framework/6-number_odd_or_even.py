@@ -6,7 +6,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-#assigning the app route to the root with ignoring slashes
 @app.route('/', strict_slashes = False)
 def hello_hbnb():
     """
@@ -17,7 +16,10 @@ def hello_hbnb():
 
 @app.route('/hbnb', strict_slashes = False)
 def hbnb():
-    # a function that return text if called by hbnb
+    """
+    this function return a string if it's accessed
+    with the hbnb
+    """
     return "HBNB"
 
 @app.route('/c/<text>', strict_slashes = False)
