@@ -24,29 +24,28 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes = False)
 def c_text(text):
-    #creating a function that return text with the string next to it
+    """
+    this function return a string if it's accessed
+    with the c
+    """
     text = text.replace('_', ' ')
     return f"C {text}"
 
 @app.route('/python/<text>', strict_slashes = False)
 def python_text(text='is_cool'):
-    #creating a function that return text
     text = text.replace('_', ' ')
     return f'Python {text}'
 
 @app.route('/number/<int:n>', strict_slashes = False)
 def number(n):
-    #creating a function that return a string with a number
     return f"{n} is a number"
 
 @app.route('/number_template/<int:n>', strict_slashes = False)
 def html_int(n):
-    #creating a function that display a web page if n is a number
     return render_template("5-number.html", number = n)
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes = False)
 def html_int(n):
-    #creating a function that display a web page if n is a number and showing if it's odd or even
     return render_template("5-number.html", number = n, type = 'even' if n % 2 == 0 else 'odd')
 
 if __name__ == '__main__':
