@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 
+'''assigning flask to app'''
 app = Flask(__name__)
 
 #assigning the app route to the root with ignoring slashes

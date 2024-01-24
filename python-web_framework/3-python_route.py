@@ -1,6 +1,8 @@
 from flask import Flask
 
+'''assigning flask to app'''
 app = Flask(__name__)
+
 #assigning the app route to the root with ignoring slashes
 @app.route('/', strict_slashes = False)
 def hello_hbnb():
@@ -18,6 +20,7 @@ def c_text(text):
     text = text.replace('_', ' ')
     return f"C {text}"
 
+@app.route('/python/<text>', strict_slashes = False)
 def python_text(text='is_cool'):
     # creating a function that return text
     text = text.replace('_', ' ')
