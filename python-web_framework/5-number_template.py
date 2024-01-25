@@ -17,7 +17,7 @@ def hello_hbnb():
 @app.route('/hbnb', strict_slashes = False)
 def hbnb():
     '''creating a function that return text if called by hbnb'''
-    return "HBNB"
+    return "HBNB"   
 
 @app.route('/c/<text>', strict_slashes = False)
 def c_text(text):
@@ -36,9 +36,8 @@ def number(n):
     '''creating a function that return a string with a number'''
     return f"{n} is a number"
 
-@app.route('/number_template/<int:n>', strict_slashes = False)
-def html_int(n):
-    '''creating a function that display a web page if n is a number'''
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def number_ret(n):
     return render_template("5-number.html", number = n)
 
 if __name__ == '__main__':
