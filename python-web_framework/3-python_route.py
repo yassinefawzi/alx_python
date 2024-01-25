@@ -26,7 +26,7 @@ def c_text(text):
     return f"C {text}"
 
 @app.route('/python/<text>', defaults = {'text': 'is_cool'}, strict_slashes = False)
-def python_text():
+def python_text(text):
     '''creating a function that return text'''
     text = text.replace('_', ' ')
     return f'Python {text}'
