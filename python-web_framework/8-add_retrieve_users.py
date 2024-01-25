@@ -10,7 +10,7 @@ if len(sys.argv) != 4:
 
 db_username = sys.argv[1]
 db_password = sys.argv[2]
-db_name = sys.argv[3]
+db_name = sys.argv[3]   
 db_host = 'localhost'
 
 app = Flask(__name__)
@@ -43,8 +43,8 @@ def index():
 def add_user():
     if request.method == 'POST':
         try:
-            name = request.form['name']
-            email = request.form['email']
+            name = request.form.get('name')
+            email = request.form.get('email')
             new_user = User(name = name, email = email)
             db.session.add(new_user)
             db.session.commit()
@@ -58,6 +58,6 @@ def add_user():
 def show_users():
     users = User.query.all()
     return render_template('users.html', users = users)
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
