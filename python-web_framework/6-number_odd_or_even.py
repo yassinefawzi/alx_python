@@ -46,7 +46,7 @@ def html_intt(n):
        a web page if n is a number.
 
     '''
-    return render_template("5-number.html", number = n, type = 'even' if n % 2 == 0 else 'odd')
+    return render_template('6-number_odd_or_even.html', number = n, type = 'even' if n % 2 == 0 else 'odd')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
