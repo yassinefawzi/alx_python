@@ -39,7 +39,7 @@ def html_int(n):
 @app.route('/number_odd_or_even/<int:n>', strict_slashes = False)
 def html_int(n):
     '''creating a function that display
-    a web page if n is a number.
+       a web page if n is a number.
 
     '''
     return render_template("5-number.html", number = n, type = 'even' if n % 2 == 0 else 'odd')
