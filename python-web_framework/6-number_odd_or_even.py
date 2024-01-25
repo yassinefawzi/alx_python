@@ -1,5 +1,5 @@
 '''
-this script start an application using flask
+importing flask and starting the app
 '''
 
 from flask import Flask, render_template
@@ -10,60 +10,35 @@ app = Flask(__name__)
 def hello_hbnb():
     """
     this function return a string with Hello HBNB! if it's accessed
-    with the root "('/')"
+    with the root
     """
     return "Hello HBNB!"
 
 @app.route('/hbnb', strict_slashes = False)
 def hbnb():
-    """
-    this function return a string if it's accessed
-    with the hbnb
-    """
+    '''creating a function that return text if called by hbnb'''
     return "HBNB"
 
 @app.route('/c/<text>', strict_slashes = False)
 def c_text(text):
-    """
-    this function return a string if it's accessed
-    with the c
-    """
+    '''creating a function that return text with the string next to it'''
     text = text.replace('_', ' ')
     return f"C {text}"
 
 @app.route('/python/<text>', strict_slashes = False)
 def python_text(text='is_cool'):
-    """
-    this function return a string and
-    show's is cool next to the text
-
-    """
+    '''creating a function that return text'''
     text = text.replace('_', ' ')
     return f'Python {text}'
 
-@app.route('/number/<int:n>', strict_slashes = False)
-def number(n):
-    """
-    this function return an int (n) 
-
-    """
-    return f"{n} is a number"
-
 @app.route('/number_template/<int:n>', strict_slashes = False)
 def html_int(n):
-    """
-    this function return an html page with a number
-    
-    """
+    '''creating a function that display a web page if n is a number'''
     return render_template("5-number.html", number = n)
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes = False)
 def html_int(n):
-    """
-    this function return an html page with a number and
-    and show's if it's even or odd
-
-    """
+    '''creating a function that display a web page if n is a number'''
     return render_template("5-number.html", number = n, type = 'even' if n % 2 == 0 else 'odd')
 
 if __name__ == '__main__':
