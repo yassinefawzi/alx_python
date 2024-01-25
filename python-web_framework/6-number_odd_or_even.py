@@ -1,6 +1,8 @@
 '''
 this is a script that use flask framework
 in this script i start an application hosted in 0.0.0.0 and use the port 5000
+in this script i coded the following functions
+hello_hbnb, hbnb, c_text, python_text, html_int, html_intt
 
 '''
 
@@ -39,7 +41,7 @@ def html_int(n):
     return render_template("5-number.html", number = n)
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes = False)
-def html_int(n):
+def html_intt(n):
     '''creating a function that display
        a web page if n is a number.
 
