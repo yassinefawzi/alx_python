@@ -1,5 +1,7 @@
 '''
-importing flask and starting the app
+this is a script that use flask framework
+in this script i start an application hosted in 0.0.0.0 and use the port 5000
+
 '''
 
 from flask import Flask, render_template
