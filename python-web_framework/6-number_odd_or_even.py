@@ -1,5 +1,5 @@
 '''
-importing flask and starting the app
+this script start an application using flask
 '''
 
 from flask import Flask, render_template
@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello_hbnb():
     """
     this function return a string with Hello HBNB! if it's accessed
-    with the root
+    with the root "('/')"
     """
     return "Hello HBNB!"
 
